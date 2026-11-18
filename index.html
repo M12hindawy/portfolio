@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohamed Hendawy — AI & Data Engineer Portfolio</title>
+    <meta name="description" content="Professional portfolio of Mohamed Ashraf Hendawy - AI & Data Engineer specializing in Big Data, Generative AI, RAG, and Deep Learning">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .project-tech { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+        .tech-tag { background: rgba(37, 99, 235, 0.1); color: #2563eb; padding: 4px 10px; border-radius: 20px; font-size: 0.78rem; font-weight: 600; border: 1px solid rgba(37, 99, 235, 0.2); }
+        .project-card { transition: transform 0.3s ease, box-shadow 0.3s ease; border-radius: 12px; overflow: hidden; }
+        .project-card:hover { transform: translateY(-5px); box-shadow: 0 12px 24px rgba(0,0,0,0.12); }
+        .service-card { transition: transform 0.3s ease; }
+        .service-card:hover { transform: translateY(-4px); }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="#home">Hendawy<span class="highlight">.ai</span></a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#achievements" class="nav-link">Achievements</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-controls">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Hi, I'm <span class="highlight">Mohamed Hendawy</span>
+                </h1>
+                <p class="hero-description">
+                    Final-Year Computer Science Student at <span class="highlight">Helwan National University</span> specializing in <span class="highlight">AI & Data Engineering</span>. Building production-grade streaming pipelines, RAG-powered multi-agent systems, and computer vision transformers.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary"><i class="fas fa-laptop-code"></i> View My Work</a>
+                    <a href="#contact" class="btn btn-secondary"><i class="fas fa-paper-plane"></i> Get In Touch</a>
+                    <a href="CV/Mohamed_Ashraf_CV.pdf" class="btn btn-outline" download="Mohamed_Ashraf_CV.pdf">
+                        <i class="fas fa-download"></i> Download CV (PDF)
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="hero-img-container">
+                    <img src="images/h2.png" alt="Mohamed Hendawy" class="hero-img">
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">Engineering data platforms & intelligent systems</p>
+            </div>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="images/Abut2.png" alt="About Mohamed Hendawy" class="about-img">
+                </div>
+                <div class="about-text">
+                    <h3><span class="highlight">Background & Focus</span></h3>
+                    <p>
+                        My name is <strong>Mohamed Ashraf Abdelhamed (Hendawy)</strong>, a final-year Computer Science student (Data Science Track) at Helwan National University. I am driven by transforming data into scalable infrastructure and intelligent software.
+                    </p>
+                    <h3><span class="highlight">Core Competencies</span></h3>
+                    <p>
+                        <strong>Data Engineering:</strong> Streaming and batch architectures using Apache Kafka, PySpark, Apache Airflow, Docker, PostgreSQL, and MinIO (S3).<br>
+                        <strong>AI & Deep Learning:</strong> PyTorch, HuggingFace Transformers, SegFormer (85.03% IoU in satellite segmentation), SwinIR, and XGBoost.<br>
+                        <strong>Generative AI & Agents:</strong> RAG architectures, ChromaDB vector indexing, hallucination verification, and multi-agent orchestration.
+                    </p>
+                    <h3><span class="highlight">Current Roles & Honors</span></h3>
+                    <p>
+                        • <strong>Generative AI Trainee</strong> at Digital Egypt Pioneers Initiative (DEPI) — Ministry of Communications & IT.<br>
+                        • <strong>Galactic Problem Solver</strong> Awardee at NASA Space Apps Cairo 2026.<br>
+                        • <strong>NVIDIA Certified</strong> in LLM Applications and RAG Agents.<br>
+                        • <strong>Huawei Big Data Associate</strong> certified with 98.5% score.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section" style="padding: 60px 0; background: var(--bg-secondary);">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Technical Skills</h2>
+                <p class="section-subtitle">Technologies and frameworks I work with</p>
+            </div>
+            <div class="skills-grid" id="skills-grid">
+                <div class="skill-item">
+                    <div class="skill-icon"><i class="fab fa-python" style="color:#3776AB;"></i></div>
+                    <div class="skill-name">Python</div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-icon"><i class="fas fa-stream" style="color:#000;"></i></div>
+                    <div class="skill-name">Apache Kafka</div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-icon"><i class="fas fa-bolt" style="color:#E25A1C;"></i></div>
+                    <div class="skill-name">Apache Spark</div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-icon"><i class="fas fa-wind" style="color:#017CEE;"></i></div>
+                    <div class="skill-name">Apache Airflow</div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-icon"><i class="fab fa-docker" style="color:#2496ED;"></i></div>
+                    <div class="skill-name">Docker</div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-icon"><i class="fas fa-brain" style="color:#EE4C2C;"></i></div>
+                    <div class="skill-name">PyTorch</div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-icon"><i class="fas fa-robot" style="color:#6A1B9A;"></i></div>
+                    <div class="skill-name">RAG & ChromaDB</div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-icon"><i class="fas fa-database" style="color:#316192;"></i></div>
+                    <div class="skill-name">PostgreSQL</div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-icon"><i class="fas fa-chart-pie" style="color:#F2C811;"></i></div>
+                    <div class="skill-name">Power BI (DAX)</div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-icon"><i class="fas fa-code-branch" style="color:#009688;"></i></div>
+                    <div class="skill-name">FastAPI & Flask</div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-icon"><i class="fab fa-git-alt" style="color:#F05032;"></i></div>
+                    <div class="skill-name">Git & GitHub</div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-icon"><i class="fab fa-js" style="color:#F7DF1E;"></i></div>
+                    <div class="skill-name">JavaScript</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">What I Do</h2>
+                <p class="section-subtitle">Areas of engineering expertise</p>
+            </div>
+            <div class="services-grid" id="services-grid">
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-network-wired"></i></div>
+                    <h3 class="service-title">Big Data & Streaming Pipelines</h3>
+                    <p class="service-description">Architecting distributed real-time data ingestion and batch transformation pipelines with Apache Kafka, Spark, MinIO, and Airflow.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-brain"></i></div>
+                    <h3 class="service-title">Generative AI & RAG Systems</h3>
+                    <p class="service-description">Building production-grade Retrieval-Augmented Generation engines, vector search indexing, and multi-agent coordination systems.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-eye"></i></div>
+                    <h3 class="service-title">Computer Vision & Deep Learning</h3>
+                    <p class="service-description">Fine-tuning vision transformers (SegFormer, SwinIR) for satellite imagery, biomedical imaging, and precision segmentation.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-chart-line"></i></div>
+                    <h3 class="service-title">Business Intelligence & ETL</h3>
+                    <p class="service-description">Designing dimensional data warehouse models, star schemas, automated ETL pipelines, and executive dashboards in Power BI and Tableau.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">Production-grade repositories live on GitHub</p>
+            </div>
+            <div class="projects-grid" id="projects-grid">
+                
+                <!-- Project 1: SP500 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/Data Anlysis.png" alt="S&P 500 Big Data Pipeline" class="project-img">
+                        <div class="project-overlay">
+                            <a href="https://github.com/M12hindawy/sp500-big-data-pipeline" class="project-link" target="_blank" rel="noopener" title="View GitHub Repo"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">S&P 500 Real-Time Big Data Pipeline</h3>
+                        <p class="project-description">
+                            Production-grade distributed streaming and batch processing pipeline for S&P 500 financial data using Apache Kafka, PySpark, MinIO (S3), and PostgreSQL, fully orchestrated with Apache Airflow and Docker Compose.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Kafka</span>
+                            <span class="tech-tag">PySpark</span>
+                            <span class="tech-tag">Airflow</span>
+                            <span class="tech-tag">Docker</span>
+                            <span class="tech-tag">MinIO</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: Drug Intelligence -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/hero.jpeg" alt="Drug Intelligence System" class="project-img">
+                        <div class="project-overlay">
+                            <a href="https://github.com/M12hindawy/drug-intelligence-system" class="project-link" target="_blank" rel="noopener" title="View GitHub Repo"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Drug Intelligence System</h3>
+                        <p class="project-description">
+                            Full-stack pharmaceutical platform benchmarking 6 deep learning architectures (DNN, LSTM, BiLSTM, CNN1D, BERT) with ChromaDB RAG engine and hallucination detection on authentic Egyptian pharmaceutical market data.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">PyTorch</span>
+                            <span class="tech-tag">BERT</span>
+                            <span class="tech-tag">ChromaDB</span>
+                            <span class="tech-tag">RAG</span>
+                            <span class="tech-tag">Flask</span>
+                            <span class="tech-tag">Docker</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: Solar Panel Segmentation -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/solar_panels.png" alt="Solar Panel Segmentation" class="project-img">
+                        <div class="project-overlay">
+                            <a href="https://github.com/M12hindawy/solar-panel-segmentation-narss" class="project-link" target="_blank" rel="noopener" title="View GitHub Repo"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Solar Panel Segmentation (NARSS GeoAI)</h3>
+                        <p class="project-description">
+                            Satellite/aerial image segmentation pipeline achieving <strong>85.03% IoU</strong> and <strong>91.91% Dice/F1</strong> using SegFormer-B4 and SwinIR super-resolution on 2,308 orthophotos, validated with Wilcoxon signed-rank test (p &lt; 0.001).
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">SegFormer-B4</span>
+                            <span class="tech-tag">SwinIR</span>
+                            <span class="tech-tag">PyTorch</span>
+                            <span class="tech-tag">Remote Sensing</span>
+                            <span class="tech-tag">GeoAI</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4: AeroHealth OS -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/test.jpg" alt="AeroHealth OS" class="project-img">
+                        <div class="project-overlay">
+                            <a href="https://m12hindawy.github.io/aerohealth-os/" class="project-link" target="_blank" rel="noopener" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="https://github.com/M12hindawy/aerohealth-os" class="project-link" target="_blank" rel="noopener" title="View GitHub Repo"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">AeroHealth OS — NASA Space Apps 2026</h3>
+                        <p class="project-description">
+                            Autonomous biomedical monitoring HUD for deep-space missions featuring real-time 60 FPS ECG waveform canvas simulation and Clinical Decision Support triage. Awarded NASA "Galactic Problem Solver".
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML5 Canvas</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">HL7 FHIR</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5: Fantasy Football -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/Education.png" alt="Fantasy Football Intelligence" class="project-img">
+                        <div class="project-overlay">
+                            <a href="https://github.com/M12hindawy/fantasy-football-intelligence" class="project-link" target="_blank" rel="noopener" title="View GitHub Repo"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Fantasy Football Multi-Agent System</h3>
+                        <p class="project-description">
+                            Autonomous sports analytics platform coordinating 15+ specialized AI agents with bivariate Poisson Dixon-Coles modeling, XGBoost projections, and an interactive Plotly Dash dashboard with Monte Carlo simulation.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Multi-Agent</span>
+                            <span class="tech-tag">Dixon-Coles</span>
+                            <span class="tech-tag">XGBoost</span>
+                            <span class="tech-tag">Plotly Dash</span>
+                            <span class="tech-tag">PuLP</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6: Arabic Sentiment Analysis -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/hero.jpeg" alt="ArabSentiment Pipeline" class="project-img">
+                        <div class="project-overlay">
+                            <a href="https://github.com/M12hindawy/arabic-sentiment-analysis" class="project-link" target="_blank" rel="noopener" title="View GitHub Repo"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">ArabSentiment-Pipeline</h3>
+                        <p class="project-description">
+                            End-to-end Arabic & Egyptian dialect sentiment classification pipeline with custom text normalizers (harakat/tatweel stripping), dialect polarity lexicon, and containerized FastAPI REST microservice.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Arabic NLP</span>
+                            <span class="tech-tag">FastAPI</span>
+                            <span class="tech-tag">Docker</span>
+                            <span class="tech-tag">Scikit-Learn</span>
+                            <span class="tech-tag">Pytest</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 7: Real-Time Anomaly Detection -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/Data Anlysis.png" alt="Real-Time Anomaly Detection" class="project-img">
+                        <div class="project-overlay">
+                            <a href="https://github.com/M12hindawy/realtime-anomaly-detection" class="project-link" target="_blank" rel="noopener" title="View GitHub Repo"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Real-Time Streaming Anomaly Detector</h3>
+                        <p class="project-description">
+                            Streaming time-series anomaly detection engine combining Z-Score, IQR, and EWMA with multi-detector consensus voting, synthetic stream generation across 5 anomaly types, and automated evaluation metrics.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Streaming ML</span>
+                            <span class="tech-tag">Z-Score</span>
+                            <span class="tech-tag">IQR</span>
+                            <span class="tech-tag">EWMA</span>
+                            <span class="tech-tag">Docker</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="achievements">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Certifications & Milestones</h2>
+                <p class="section-subtitle">Credentials and verified achievements</p>
+            </div>
+            <div class="achievements-grid" id="achievements-grid">
+                
+                <div class="achievement-card">
+                    <div class="achievement-image">
+                        <img src="certificate/1.png" alt="NVIDIA RAG Agents">
+                    </div>
+                    <div class="achievement-content">
+                        <h3 class="achievement-title">NVIDIA</h3>
+                        <p class="achievement-meta">AUG 2026</p>
+                        <p class="achievement-description">Building RAG Agents with LLMs</p>
+                    </div>
+                </div>
+
+                <div class="achievement-card">
+                    <div class="achievement-image">
+                        <img src="certificate/2.png" alt="NASA Space Apps">
+                    </div>
+                    <div class="achievement-content">
+                        <h3 class="achievement-title">NASA Space Apps Challenge</h3>
+                        <p class="achievement-meta">NOV 2026</p>
+                        <p class="achievement-description">Galactic Problem Solver Award</p>
+                    </div>
+                </div>
+
+                <div class="achievement-card">
+                    <div class="achievement-image">
+                        <img src="certificate/3.png" alt="NARSS GeoAI">
+                    </div>
+                    <div class="achievement-content">
+                        <h3 class="achievement-title">NARSS Egypt</h3>
+                        <p class="achievement-meta">SEP 2026</p>
+                        <p class="achievement-description">GeoAI: Solar Panel Segmentation (120hr)</p>
+                    </div>
+                </div>
+
+                <div class="achievement-card">
+                    <div class="achievement-image">
+                        <img src="certificate/4.png" alt="Huawei Big Data">
+                    </div>
+                    <div class="achievement-content">
+                        <h3 class="achievement-title">Huawei / NTI</h3>
+                        <p class="achievement-meta">SEP 2026</p>
+                        <p class="achievement-description">Big Data Associate — Score 98.5% (80hr)</p>
+                    </div>
+                </div>
+
+                <div class="achievement-card">
+                    <div class="achievement-image">
+                        <img src="certificate/5.png" alt="ITI BI Developer">
+                    </div>
+                    <div class="achievement-content">
+                        <h3 class="achievement-title">ITI Egypt</h3>
+                        <p class="achievement-meta">SEP 2025</p>
+                        <p class="achievement-description">Business Intelligence Development (120hr)</p>
+                    </div>
+                </div>
+
+                <div class="achievement-card">
+                    <div class="achievement-image">
+                        <img src="certificate/6.png" alt="NVIDIA LLM Applications">
+                    </div>
+                    <div class="achievement-content">
+                        <h3 class="achievement-title">NVIDIA</h3>
+                        <p class="achievement-meta">DEC 2025</p>
+                        <p class="achievement-description">Building LLM Apps with Prompt Engineering</p>
+                    </div>
+                </div>
+
+                <div class="achievement-card">
+                    <div class="achievement-image">
+                        <img src="certificate/7.png" alt="Huawei AI">
+                    </div>
+                    <div class="achievement-content">
+                        <h3 class="achievement-title">Huawei ICT Academy</h3>
+                        <p class="achievement-meta">APR 2026</p>
+                        <p class="achievement-description">HCIA-AI V4.0 Certification</p>
+                    </div>
+                </div>
+
+                <div class="achievement-card">
+                    <div class="achievement-image">
+                        <img src="certificate/8.png" alt="Dubai Center for AI">
+                    </div>
+                    <div class="achievement-content">
+                        <h3 class="achievement-title">Dubai Future Foundation</h3>
+                        <p class="achievement-meta">2025</p>
+                        <p class="achievement-description">Prompt Engineering for AI Systems</p>
+                    </div>
+                </div>
+
+                <div class="achievement-card">
+                    <div class="achievement-image">
+                        <img src="certificate/9.png" alt="Cisco Python">
+                    </div>
+                    <div class="achievement-content">
+                        <h3 class="achievement-title">Cisco Networking Academy</h3>
+                        <p class="achievement-meta">2025</p>
+                        <p class="achievement-description">Python Essentials 1 &amp; 2</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">Let's discuss opportunities and collaborations</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <p><a href="mailto:mohamedhindawy205@gmail.com" style="color:inherit; text-decoration:none;">mohamedhindawy205@gmail.com</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Phone</h4>
+                            <p>+20 114 888 6982</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Location</h4>
+                            <p>Giza / Cairo, Egypt</p> 
+                        </div>
+                    </div>
+                    <div class="social-links" style="margin-top: 20px; display: flex; gap: 15px;">
+                        <a href="https://github.com/M12hindawy" class="social-link" target="_blank" rel="noopener" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/mohamed-ashraf-b7b5a72b6/" class="social-link" target="_blank" rel="noopener" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://www.facebook.com/share/1CvtgK2qEQ/" class="social-link" target="_blank" rel="noopener" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </div>
+                </div>
+                <form class="contact-form" id="contact-form" action="https://formspree.io/f/mohamedhindawy205@gmail.com" method="POST">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>&copy; 2026 Mohamed Ashraf Hendawy. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
